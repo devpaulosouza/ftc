@@ -1,11 +1,12 @@
-package br.com.ftc.bean;
+package br.com.ftc.bean.jflap;
 
+import br.com.ftc.bean.jflap.Automaton;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 /**
  * Bean para leitura do XML de saída do JFlap
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 @JacksonXmlRootElement
 public class Structure {

@@ -1,4 +1,4 @@
-package br.com.ftc.bean;
+package br.com.ftc.bean.jflap;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 /**
  * Bean para leitura de autômato da saída do JFlap
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 public class Automaton {
 

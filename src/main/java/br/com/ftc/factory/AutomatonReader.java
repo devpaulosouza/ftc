@@ -1,14 +1,13 @@
 package br.com.ftc.factory;
 
-import br.com.ftc.bean.Automaton;
+import br.com.ftc.bean.jflap.Automaton;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
  * Leitor de autômatos para a saída do JFlap
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 public interface AutomatonReader {
     /**

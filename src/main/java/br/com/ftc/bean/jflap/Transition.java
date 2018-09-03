@@ -1,11 +1,11 @@
-package br.com.ftc.bean;
+package br.com.ftc.bean.jflap;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 /**
  * Bean para leitura da transição de um estado para outro da saída do JFlap
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 @JacksonXmlRootElement(localName = "transition")
 public class Transition {

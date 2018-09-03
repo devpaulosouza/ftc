@@ -1,10 +1,9 @@
 package br.com.ftc;
 
-import br.com.ftc.bean.Automaton;
+import br.com.ftc.bean.jflap.Automaton;
 import br.com.ftc.factory.AutomatonReader;
 import br.com.ftc.factory.AutomatonReaderFactory;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -14,7 +13,7 @@ import java.util.Scanner;
  *     O objetivo é implementar os algorítmos aprendidos nas aulas de Fundamentos Teóricos da Computação
  * </p>
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 public class App {
 

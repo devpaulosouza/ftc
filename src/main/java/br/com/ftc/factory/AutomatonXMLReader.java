@@ -1,7 +1,7 @@
 package br.com.ftc.factory;
 
-import br.com.ftc.bean.Automaton;
-import br.com.ftc.bean.Structure;
+import br.com.ftc.bean.jflap.Automaton;
+import br.com.ftc.bean.jflap.Structure;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.*;
@@ -9,7 +9,7 @@ import java.io.*;
 /**
  * Leitor de autômatos no formato XML para as saídas do JFlap
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 public class AutomatonXMLReader implements AutomatonReader {
 

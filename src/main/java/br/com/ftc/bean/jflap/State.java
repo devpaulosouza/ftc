@@ -1,4 +1,4 @@
-package br.com.ftc.bean;
+package br.com.ftc.bean.jflap;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 /**
  * Bean para leitura do State da saída do JFlap
  * @author Paulo H Souza
- * @version 0.1.0
+ * @version 0.1.1
  */
 @JacksonXmlRootElement(localName = "states")
 public class State {
