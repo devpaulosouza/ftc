@@ -1,5 +1,8 @@
 package br.com.ftc.bean.jflap;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
@@ -26,6 +29,7 @@ public class State {
     /**
      * Flag de estado inicial
      */
+    @JacksonXmlProperty(localName = "initial")
     private boolean initial;
 
     /**
@@ -57,19 +61,32 @@ public class State {
         this.name = name;
     }
 
-    public boolean isInitial() {
+    boolean isInitialState() {
         return initial;
     }
 
-    public void setInitial(boolean initial) {
+    @JsonSetter(nulls = Nulls.AS_EMPTY)
+    public void setInitial(String initial) {
+         this.initial = initial != null;
+    }
+
+    void setInitial(boolean initial) {
         this.initial = initial;
     }
 
-    public boolean isFinalState() {
-        return finalState;
+
+    @JsonIgnore
+    boolean isFinalState() {
+        return this.finalState;
     }
 
-    public void setFinalState(boolean finalState) {
+    @JsonSetter(nulls = Nulls.AS_EMPTY)
+    public void setFinalState(String finalState) {
+        this.finalState = finalState != null;
+    }
+
+    @JsonIgnore
+    void setFinalState(boolean finalState){
         this.finalState = finalState;
     }
 
@@ -100,4 +117,10 @@ public class State {
                 ", y=" + y +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return (obj instanceof State && ((State) obj).getId() == id);
+    }
+
 }

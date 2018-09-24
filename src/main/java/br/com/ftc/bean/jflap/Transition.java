@@ -1,5 +1,8 @@
 package br.com.ftc.bean.jflap;
 
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 /**
@@ -12,42 +15,46 @@ public class Transition {
     /**
      * Estado de partida
      */
-    private String from;
+    @JacksonXmlProperty(localName = "from")
+    private Integer from;
 
     /**
      * Estado de chegada
      */
-    private String to;
+    @JacksonXmlProperty(localName = "to")
+    private Integer to;
 
     /**
      * Valor para transição
      */
-    private String read;
+    @JsonSetter(nulls = Nulls.AS_EMPTY)
+    @JacksonXmlProperty(localName = "read")
+    private Character read;
 
     public Transition() {
     }
 
-    public String getFrom() {
+    Integer getFrom() {
         return this.from;
     }
 
-    public void setFrom(String from) {
+    public void setFrom(Integer from) {
         this.from = from;
     }
 
-    public String getTo() {
+    Integer getTo() {
         return this.to;
     }
 
-    public void setTo(String to) {
+    public void setTo(Integer to) {
         this.to = to;
     }
 
-    public String getRead() {
+    Character getRead() {
         return this.read;
     }
 
-    public void setRead(String read) {
+    public void setRead(Character read) {
         this.read = read;
     }
 

@@ -1,6 +1,5 @@
 package br.com.ftc.bean.jflap;
 
-import br.com.ftc.bean.jflap.Automaton;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 /**
@@ -14,8 +13,7 @@ public class Structure {
     /**
      * Tipo do autômato.
      * <ul>
-     *     <li>afd</li>
-     *     <li>afn</li>
+     *     <li>af</li>
      * </ul>
      */
     private String type;
